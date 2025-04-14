@@ -19,3 +19,32 @@ button.needsclick.klaviyo-close-form.go2324193863.kl-private-reset-css-Xuajs1{
     background-color: unset !important;
     }
 </style>
+
+
+<script>
+(function() {
+  const css = `
+    form.needsclick.klaviyo-form.klaviyo-form-version-cid_4.go417382439.kl-private-reset-css-Xuajs1 {
+        display: none !important;
+    }
+    button.needsclick.klaviyo-close-form.go2324193863.kl-private-reset-css-Xuajs1 {
+        display: none !important;
+    }
+    .needsclick.kl-private-reset-css-Xuajs1 {
+        background-color: unset !important;
+    }
+  `;
+
+  function injectStyle() {
+    if (!document.getElementById('custom-klaviyo-style')) {
+      const style = document.createElement('style');
+      style.id = 'custom-klaviyo-style';
+      style.innerHTML = css;
+      document.head.appendChild(style);
+    }
+  }
+
+  // Run every 100ms
+  setInterval(injectStyle, 100);
+})();
+</script>
