@@ -41,6 +41,9 @@ button.needsclick.klaviyo-close-form.go2324193863.kl-private-reset-css-Xuajs1{
       style.id = 'custom-klaviyo-style';
       style.innerHTML = css;
       document.head.appendChild(style);
+      console.log('[Klaviyo CSS Patch] Style injected ✅');
+    } else {
+      console.log('[Klaviyo CSS Patch] Style already present ⏳');
     }
   }
 
@@ -48,3 +51,4 @@ button.needsclick.klaviyo-close-form.go2324193863.kl-private-reset-css-Xuajs1{
   setInterval(injectStyle, 100);
 })();
 </script>
+
